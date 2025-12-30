@@ -46,6 +46,14 @@ app.use('/api/admin', adminRoutes);
 const adminProductRoutes = require('./routes/admin-products');
 app.use('/api/admin', adminProductRoutes);
 
+// Order routes
+const orderRoutes = require('./routes/orders');
+app.use('/api/orders', orderRoutes);
+
+// Payment routes
+const paymentRoutes = require('./routes/payments');
+app.use('/api/payments', paymentRoutes);
+
 // Serve static files for uploaded images
 app.use('/uploads', express.static('uploads'));
 
